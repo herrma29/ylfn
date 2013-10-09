@@ -1,5 +1,5 @@
 Ylfn::Application.routes.draw do
-  root "weclome#index"
+  root to: "weclome#index"
 
 get 'auth/:provider/callback', to: 'sessions#create'
 get 'auth/failure', to: redirect('/')
