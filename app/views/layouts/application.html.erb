@@ -39,8 +39,8 @@
       <li class="divider"></li>
       <li><%= link_to "Help", help_path %></li>
       <li class="divider"></li>
-      <li><% if current_user %>
-    Signed in as <%= current_user.name %>!
+      <li><% if current_user %><p>
+    Signed in as <%= current_user.name %>!</p>
     <%= link_to "Sign out", signout_path, id: "sign_out" %>
   <% else %>
     <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %><% end %></li>
