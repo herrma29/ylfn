@@ -23,29 +23,28 @@
 
   <body>
 
-
+<div class="fixed contain-to-grid sticky">
 <nav class="top-bar">
   <ul class="title-area">
     <li class="name">
       <h1><%= link_to "Get Local", root_path %></a></h1>
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
     </li>
   </ul>
   <section class="top-bar-section">
     <ul class="right">
       <li class="divider"></li>
-      <li><%= link_to "About Us", about_path %></li>
+      <li><%= link_to "Home", root_path %></li>
       <li class="divider"></li>
-      <li><%= link_to "Contact Us", contact_path %></li>
-      <li class="divider"></li>
-      <li><%= link_to "Help", help_path %></li>
-      <li class="divider"></li>
-      <li><% if current_user %>
-    <%= link_to "Sign out", signout_path, id: "sign_out" %>
-  <% else %>
-    <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %><% end %></li>
+      <% if current_user %>
+        <%= render 'layouts/menu_logged_in' %>
+      <% else %>
+        <%= render 'layouts/menu_not_logged_in' %>
+      <% end %></li>
     </ul>
-  </div>
+  </section>
 </nav>
+</div>
 
 <div class="row">
   <div class="small-8 columns"><%= yield %></div>

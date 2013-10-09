@@ -1,0 +1,13 @@
+<li>
+	<%= link_to current_user.name, '#' %>
+</li>
+
+<li class="divider"></li>
+<li class="has-dropdown"><a href="#">Settings</a>
+	<ul class="dropdown">
+		<li><label>Use Page as:</label></li>
+		<li><a href="#"></a></li>
+		<li><a href="#"></a></li>
+		<%= link_to "Logout out", signout_path, id: "sign_out" %>
+	</ul>
+</li>
