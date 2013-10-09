@@ -1,9 +1,9 @@
 Ylfn::Application.routes.draw do
   root to: "weclome#index"
 
-get 'auth/:provider/callback', to: 'sessions#create'
-get 'auth/failure', to: redirect('/')
-get 'signout', to: 'sessions#destroy', as: 'signout'
+  get 'auth/:provider/callback', to: 'sessions#create'
+  get 'auth/failure', to: redirect('/')
+  get 'signout', to: 'sessions#destroy', as: 'signout'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
